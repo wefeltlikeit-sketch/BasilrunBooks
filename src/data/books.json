@@ -8,8 +8,12 @@
     "genre": "Culinary mystery",
     "description": "A secret order of chefs. A mystery in 1927 Paris. Enter the world of The Golden Ladle Chronicles.",
     "symbol": "✧",
-    "cover": null,
-    "amazon": "https://www.amazon.com/dp/B0FH2W3MGR"
+    "cover": "/assets/books/leo-and-the-order-of-the-golden-ladle-960.webp",
+    "amazon": "https://www.amazon.com/dp/B0FH2W3MGR",
+    "coverSmall": "/assets/books/leo-and-the-order-of-the-golden-ladle-480.webp",
+    "coverWidth": 960,
+    "coverHeight": 1500,
+    "coverAlt": "Léo and the Order of the Golden Ladle book cover"
   },
   {
     "slug": "the-venetian-gambit",
@@ -20,8 +24,12 @@
     "genre": "Culinary mystery",
     "description": "Continue The Golden Ladle Chronicles with its second book, The Venetian Gambit.",
     "symbol": "✧",
-    "cover": null,
-    "amazon": "https://www.amazon.com/dp/B0FH5W4TZ4"
+    "cover": "/assets/books/the-venetian-gambit-960.webp",
+    "amazon": "https://www.amazon.com/dp/B0FH5W4TZ4",
+    "coverSmall": "/assets/books/the-venetian-gambit-480.webp",
+    "coverWidth": 960,
+    "coverHeight": 1500,
+    "coverAlt": "The Venetian Gambit book cover"
   },
   {
     "slug": "the-sauce-of-uncertainty",
@@ -32,8 +40,12 @@
     "genre": "Culinary mystery",
     "description": "The third book in The Golden Ladle Chronicles.",
     "symbol": "✧",
-    "cover": null,
-    "amazon": "https://www.amazon.com/dp/B0FH5DYP76"
+    "cover": "/assets/books/the-sauce-of-uncertainty-960.webp",
+    "amazon": "https://www.amazon.com/dp/B0FH5DYP76",
+    "coverSmall": "/assets/books/the-sauce-of-uncertainty-480.webp",
+    "coverWidth": 960,
+    "coverHeight": 1500,
+    "coverAlt": "The Sauce of Uncertainty book cover"
   },
   {
     "slug": "the-scent-of-secrets",
@@ -44,8 +56,12 @@
     "genre": "Culinary mystery",
     "description": "Discover the fourth book in The Golden Ladle Chronicles.",
     "symbol": "✧",
-    "cover": null,
-    "amazon": "https://www.amazon.com/dp/B0FHC3Z7DY"
+    "cover": "/assets/books/the-scent-of-secrets-960.webp",
+    "amazon": "https://www.amazon.com/dp/B0FHC3Z7DY",
+    "coverSmall": "/assets/books/the-scent-of-secrets-480.webp",
+    "coverWidth": 960,
+    "coverHeight": 1500,
+    "coverAlt": "The Scent of Secrets book cover"
   },
   {
     "slug": "the-queens-gambit",
@@ -56,8 +72,12 @@
     "genre": "Fantasy adventure",
     "description": "Five young apprentices. A medieval kingdom. Step into a world of magic and ancient secrets.",
     "symbol": "♜",
-    "cover": null,
-    "amazon": "https://www.amazon.com/dp/B0FHFLT3H2"
+    "cover": "/assets/books/the-queens-gambit-960.webp",
+    "amazon": "https://www.amazon.com/dp/B0FHFLT3H2",
+    "coverSmall": "/assets/books/the-queens-gambit-480.webp",
+    "coverWidth": 960,
+    "coverHeight": 1500,
+    "coverAlt": "Apprentices of Highwind Book 1 cover, titled The Queen’s Messengers"
   },
   {
     "slug": "the-fractured-crown",
@@ -68,8 +88,12 @@
     "genre": "Fantasy adventure",
     "description": "Return to the world of Apprentices of Highwind in volume two.",
     "symbol": "♜",
-    "cover": null,
-    "amazon": "https://www.amazon.com/dp/B0FHG2PCNG"
+    "cover": "/assets/books/the-fractured-crown-960.webp",
+    "amazon": "https://www.amazon.com/dp/B0FHG2PCNG",
+    "coverSmall": "/assets/books/the-fractured-crown-480.webp",
+    "coverWidth": 960,
+    "coverHeight": 1500,
+    "coverAlt": "The Fractured Crown book cover"
   },
   {
     "slug": "highwinds-unseen-gears",
@@ -80,8 +104,12 @@
     "genre": "Fantasy adventure",
     "description": "Before Queen Aveline’s magical quests, a hidden network of apprentices kept Highwind Castle running. Discover an earlier chapter of Highwind in the first book of The Highwind Network.",
     "symbol": "♜",
-    "cover": null,
-    "amazon": "https://www.amazon.com/dp/B0FLG9K19V"
+    "cover": "/assets/books/highwinds-unseen-gears-960.webp",
+    "amazon": "https://www.amazon.com/dp/B0FLG9K19V",
+    "coverSmall": "/assets/books/highwinds-unseen-gears-480.webp",
+    "coverWidth": 960,
+    "coverHeight": 1500,
+    "coverAlt": "Highwind’s Unseen Gears book cover"
   },
   {
     "slug": "westvale-where-weird-happens",
@@ -92,8 +120,12 @@
     "genre": "Wonderfully strange tales",
     "description": "Welcome to a town where the bizarre is part of everyday life. A collection of strange, funny stories.",
     "symbol": "☾",
-    "cover": null,
-    "amazon": "https://www.amazon.com/dp/B0FHRFN94K"
+    "cover": "/assets/books/westvale-where-weird-happens-960.webp",
+    "amazon": "https://www.amazon.com/dp/B0FHRFN94K",
+    "coverSmall": "/assets/books/westvale-where-weird-happens-480.webp",
+    "coverWidth": 960,
+    "coverHeight": 1500,
+    "coverAlt": "Westvale: Where Weird Happens book cover"
   },
   {
     "slug": "westvale-even-weirder",
@@ -104,8 +136,12 @@
     "genre": "Wonderfully strange tales",
     "description": "Westvale returns with another collection of unusual tales in the second Westvale Tales book.",
     "symbol": "☾",
-    "cover": null,
-    "amazon": "https://www.amazon.com/dp/B0FLH79X4T"
+    "cover": "/assets/books/westvale-even-weirder-960.webp",
+    "amazon": "https://www.amazon.com/dp/B0FLH79X4T",
+    "coverSmall": "/assets/books/westvale-even-weirder-480.webp",
+    "coverWidth": 960,
+    "coverHeight": 1500,
+    "coverAlt": "Westvale: Even Weirder book cover"
   },
   {
     "slug": "the-mobius-unit",
@@ -116,7 +152,11 @@
     "genre": "Science and secret agents",
     "description": "Five middle schoolers use their scientific talents as secret agents of STEM. Join their missions in a collection bringing together Quantum Chaos and three novellas, where teamwork and clever thinking meet high-tech trouble.",
     "symbol": "∞",
-    "cover": null,
-    "amazon": "https://www.amazon.com/dp/B0FKDQPCDM"
+    "cover": "/assets/books/the-mobius-unit-960.webp",
+    "amazon": "https://www.amazon.com/dp/B0FKDQPCDM",
+    "coverSmall": "/assets/books/the-mobius-unit-480.webp",
+    "coverWidth": 960,
+    "coverHeight": 1500,
+    "coverAlt": "The Möbius Unit: Quantum Chaos and Other Adventures book cover"
   }
 ]

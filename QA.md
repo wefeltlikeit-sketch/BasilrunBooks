@@ -14,3 +14,7 @@
 - Public hosting not configured in this task. Canonical metadata and sitemap are generated when Netlify supplies URL or site.url is set. Netlify handles static 404.html without an SPA rewrite.
 
 The Playwright command-line runner encountered local cache permissions, so browser interaction and visual checks used the available in-app browser automation instead.
+
+## Supplied artwork integration
+
+All ten author-provided covers were visually matched by title and converted to two full-frame WebP sizes. Browser checks confirmed all ten library images loaded. The mobile book page measured 390px content width with no horizontal overflow. Primary detail covers load eagerly; library and related covers load lazily. Original artwork files remain untouched.
