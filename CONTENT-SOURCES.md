@@ -25,4 +25,4 @@ Prompt: Use case: illustration-story. Create a premium illustrated website lands
 
 Source folder: `/Volumes/Samsung SSD/Book Covers`. Original files are unchanged. Each book has 480px and 960px WebP derivatives in `public/assets/books/`, preserving the full 16:25 cover artwork. Filename typos were resolved by reading the cover titles.
 
-Apprentices of Highwind Book 1 supplied artwork reads “The Queen’s Messengers”; Amazon currently reads “The Queen’s Gambit.” Website title decision pending author confirmation. Alt text accurately identifies the supplied cover.
+The initial Book 1 artwork was superseded by the author’s `Apprentices of Highwind 2 use.jpg`. Despite its filename, its printed title is “The Queen’s Gambit” and “Volume 1”; it is correctly assigned to Book 1. “The Fractured Crown” remains Book 2. All supplied artwork now matches the website titles.
