@@ -31,7 +31,25 @@ function cover(b, eager = false) {
     : `<div class="book-cover ${b.world}" aria-label="${esc(b.title)} — temporary typographic cover"><span class="cover-series">${esc(b.series)}</span><span class="cover-symbol" aria-hidden="true">${b.symbol}</span><span class="cover-title">${esc(b.title)}</span><span class="cover-author">W.T. BROOKS</span></div>`;
 }
 const card = (b) =>
-  `<article class="book-item" data-world="${b.world}"><a class="book-object" href="/books/${b.slug}/">${cover(b)}</a><p class="eyebrow">${esc(b.series)}${b.number ? ` · ${b.number}` : ""}</p><h3><a href="/books/${b.slug}/">${esc(b.title)}</a></h3><a class="text-link" href="/books/${b.slug}/">Discover the story <span aria-hidden="true">↗</span></a></article>`;
+  `<article class="book-item" data-world="${b.world}"><a class="book-object" href="/books/${b.slug}/">${cover(b)}</a><p class="eyebrow">${esc(b.series)}${b.number ? ` · ${b.number}` : ""}</p><h3><a href="/books/${b.slug}/">${esc(b.title)}</a></h3><p class="card-hook">${esc(b.description)}</p><a class="text-link" href="/books/${b.slug}/">Discover the story <span aria-hidden="true">↗</span></a></article>`;
+
+function bookPage(b, related, suggestions) {
+  const series = books.filter((x) => x.series === b.series && x.number).sort((x, y) => x.number - y.number);
+  const order = series.length > 1
+    ? `<nav class="reading-order" aria-label="${esc(b.series)} reading order"><p class="eyebrow">Reading order</p><ol>${series.map((x) => `<li${x.slug === b.slug ? ' aria-current="page"' : ""}><a href="/books/${x.slug}/"><span class="order-num">${x.number}</span><img src="${esc(x.coverSmall || x.cover)}" alt="" width="96" height="150" loading="lazy" decoding="async"><span class="order-title">${esc(x.title)}</span></a></li>`).join("")}</ol></nav>`
+    : "";
+  const aside = [
+    b.characters?.length ? `<div class="aside-card"><p class="eyebrow">Meet the characters</p><ul class="cast">${b.characters.map((c) => `<li><strong>${esc(c.name)}</strong><span>${esc(c.role)}</span></li>`).join("")}</ul></div>` : "",
+    b.comps?.length ? `<div class="aside-card"><p class="eyebrow">Perfect for fans of</p><ul class="comps">${b.comps.map((c) => `<li>${esc(c)}</li>`).join("")}</ul></div>` : "",
+  ].join("");
+  const highlights = b.highlights
+    ? `<section class="highlights section" aria-labelledby="hl-${b.slug}"><h2 id="hl-${b.slug}">${esc(b.highlights.title)}</h2><ul>${b.highlights.items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul></section>`
+    : "";
+  const contents = b.contents?.length
+    ? `<section class="contents section" aria-labelledby="ct-${b.slug}"><p class="eyebrow">Inside this collection</p><h2 id="ct-${b.slug}">${b.contents.length} adventures in one book</h2><ol>${b.contents.map((c) => `<li><h3>${esc(c.title)}</h3><p>${esc(c.text)}</p></li>`).join("")}</ol></section>`
+    : "";
+  return `<main id="main" class="book-page ${b.world}"><div class="breadcrumb"><a href="/#books">← Back to the library</a></div><section class="book-detail section"><div class="detail-cover">${cover(b, true)}${!b.cover ? '<p class="art-note">Temporary typographic cover · final artwork to come</p>' : ""}</div><div><p class="eyebrow">${esc(b.series)}${b.number ? ` · BOOK ${b.number}` : " · STORY COLLECTION"}</p><h1>${esc(b.title)}</h1><p class="genre">${esc(b.genre)}</p><p class="synopsis">${esc(b.lead || b.description)}</p>${external(amazon(b), b.amazon ? "See the book on Amazon" : "Find this title on Amazon", "button")}<p class="purchase-note">${b.amazon ? "View available editions and purchase on Amazon." : "Opens an Amazon search for this title and W.T. Brooks."}</p></div></section>${b.blurb?.length ? `<section class="story section${aside ? "" : " no-aside"}" aria-labelledby="story-${b.slug}"><div class="story-text"><p class="eyebrow">The story</p><h2 id="story-${b.slug}" class="sr-only">About ${esc(b.title)}</h2>${b.blurb.map((p) => `<p>${esc(p)}</p>`).join("")}${b.closer ? `<blockquote class="closer"><p>${esc(b.closer)}</p></blockquote>` : ""}</div>${aside ? `<aside class="story-aside" aria-label="About this book">${aside}</aside>` : ""}</section>` : ""}${highlights}${contents}${order ? `<section class="section order-wrap">${order}</section>` : ""}<section class="section"><p class="eyebrow">KEEP EXPLORING</p><h2>${related.length ? (b.world === "highwind" ? "More from the world of Highwind" : `More from ${esc(b.series)}`) : "Another adventure awaits"}</h2><div class="book-grid related">${suggestions.map(card).join("")}</div></section></main>`;
+}
 await rm("dist", { recursive: true, force: true });
 await mkdir("dist", { recursive: true });
 await cp("public", "dist", { recursive: true });
@@ -62,7 +80,7 @@ for (const b of books) {
     "/books/" + b.slug + "/",
     layout(
       b.title,
-      `<main id="main" class="book-page"><div class="breadcrumb"><a href="/#books">← Back to the library</a></div><section class="book-detail section ${b.world}"><div class="detail-cover">${cover(b, true)}${!b.cover ? '<p class="art-note">Temporary typographic cover · final artwork to come</p>' : ""}</div><div><p class="eyebrow">${esc(b.series)}${b.number ? ` · BOOK ${b.number}` : " · STORY COLLECTION"}</p><h1>${esc(b.title)}</h1><p class="genre">${esc(b.genre)}</p><p class="synopsis">${esc(b.description)}</p>${external(amazon(b), b.amazon ? "See the book on Amazon" : "Find this title on Amazon", "button")}<p class="purchase-note">${b.amazon ? "View available editions and purchase on Amazon." : "Opens an Amazon search for this title and W.T. Brooks."}</p><details><summary>Choosing a book for a reader?</summary><p>Check the Amazon listing for the current description, reading age, available formats, and any sample supplied by the author.</p></details></div></section><section class="section"><p class="eyebrow">KEEP EXPLORING</p><h2>${related.length ? (b.world === "highwind" ? "More from the world of Highwind" : `More from ${esc(b.series)}`) : "Another adventure awaits"}</h2><div class="book-grid related">${suggestions.map(card).join("")}</div></section></main>`,
+      bookPage(b, related, suggestions),
       "/books/" + b.slug + "/",
       b.description,
       {
