@@ -1,4 +1,29 @@
-import {readFile,readdir,access} from 'node:fs/promises';
-import assert from 'node:assert/strict';
-const books=JSON.parse(await readFile('src/data/books.json'));assert.equal(new Set(books.map(b=>b.slug)).size,books.length);let count=0;
-async function walk(path){for(const entry of await readdir(path,{withFileTypes:true})){const file=path+'/'+entry.name;if(entry.isDirectory())await walk(file);else if(file.endsWith('.html')){const html=await readFile(file,'utf8');assert.equal((html.match(/<h1[ >]/g)||[]).length,1,file+' requires one h1');assert(html.includes('name="description"'),file);for(const [,url]of html.matchAll(/(?:href|src)="(\/[^"#]*)"/g)){const dest='dist'+url.split('#')[0];await access(dest.endsWith('/')?dest+'index.html':dest);}count++;}}}await walk('dist');console.log(`Verified ${count} pages: internal routes/assets, primary headings and descriptions; ${books.length} unique book slugs.`);
+import { readFile, readdir, access } from "node:fs/promises";
+import assert from "node:assert/strict";
+const books = JSON.parse(await readFile("src/data/books.json"));
+assert.equal(new Set(books.map((b) => b.slug)).size, books.length);
+let count = 0;
+async function walk(path) {
+  for (const entry of await readdir(path, { withFileTypes: true })) {
+    const file = path + "/" + entry.name;
+    if (entry.isDirectory()) await walk(file);
+    else if (file.endsWith(".html")) {
+      const html = await readFile(file, "utf8");
+      assert.equal(
+        (html.match(/<h1[ >]/g) || []).length,
+        1,
+        file + " requires one h1",
+      );
+      assert(html.includes('name="description"'), file);
+      for (const [, url] of html.matchAll(/(?:href|src)="(\/[^"#]*)"/g)) {
+        const dest = "dist" + url.split("#")[0];
+        await access(dest.endsWith("/") ? dest + "index.html" : dest);
+      }
+      count++;
+    }
+  }
+}
+await walk("dist");
+console.log(
+  `Verified ${count} pages: internal routes/assets, primary headings and descriptions; ${books.length} unique book slugs.`,
+);

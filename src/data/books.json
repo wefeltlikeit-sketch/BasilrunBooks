@@ -1,10 +1,98 @@
 [
- {"slug":"leo-and-the-order-of-the-golden-ladle","title":"Léo and the Order of the Golden Ladle","series":"The Golden Ladle Chronicles","number":1,"world":"golden","genre":"Culinary mystery","description":"A secret order of chefs. A mystery in 1927 Paris. Enter the world of The Golden Ladle Chronicles.","symbol":"✧","cover":null,"amazon":null},
- {"slug":"the-venetian-gambit","title":"The Venetian Gambit","series":"The Golden Ladle Chronicles","number":2,"world":"golden","genre":"Culinary mystery","description":"Continue The Golden Ladle Chronicles with its second book, The Venetian Gambit.","symbol":"✧","cover":null,"amazon":null},
- {"slug":"the-sauce-of-uncertainty","title":"The Sauce of Uncertainty","series":"The Golden Ladle Chronicles","number":3,"world":"golden","genre":"Culinary mystery","description":"The third book in The Golden Ladle Chronicles.","symbol":"✧","cover":null,"amazon":null},
- {"slug":"the-scent-of-secrets","title":"The Scent of Secrets","series":"The Golden Ladle Chronicles","number":4,"world":"golden","genre":"Culinary mystery","description":"Discover the fourth book in The Golden Ladle Chronicles.","symbol":"✧","cover":null,"amazon":null},
- {"slug":"the-queens-gambit","title":"The Queen’s Gambit","series":"Apprentices of Highwind","number":1,"world":"highwind","genre":"Fantasy adventure","description":"Five young apprentices. A medieval kingdom. Step into a world of magic and ancient secrets.","symbol":"♜","cover":null,"amazon":null},
- {"slug":"the-fractured-crown","title":"The Fractured Crown","series":"Apprentices of Highwind","number":2,"world":"highwind","genre":"Fantasy adventure","description":"Return to the world of Apprentices of Highwind in volume two.","symbol":"♜","cover":null,"amazon":null},
- {"slug":"westvale-where-weird-happens","title":"Westvale: Where Weird Happens","series":"Westvale Tales","number":1,"world":"westvale","genre":"Wonderfully strange tales","description":"Welcome to a town where the bizarre is part of everyday life. A collection of strange, funny stories.","symbol":"☾","cover":null,"amazon":null},
- {"slug":"westvale-even-weirder","title":"Westvale: Even Weirder","series":"Westvale Tales","number":2,"world":"westvale","genre":"Wonderfully strange tales","description":"Westvale returns with another collection of unusual tales in the second Westvale Tales book.","symbol":"☾","cover":null,"amazon":null}
+  {
+    "slug": "leo-and-the-order-of-the-golden-ladle",
+    "title": "Léo and the Order of the Golden Ladle",
+    "series": "The Golden Ladle Chronicles",
+    "number": 1,
+    "world": "golden",
+    "genre": "Culinary mystery",
+    "description": "A secret order of chefs. A mystery in 1927 Paris. Enter the world of The Golden Ladle Chronicles.",
+    "symbol": "✧",
+    "cover": null,
+    "amazon": null
+  },
+  {
+    "slug": "the-venetian-gambit",
+    "title": "The Venetian Gambit",
+    "series": "The Golden Ladle Chronicles",
+    "number": 2,
+    "world": "golden",
+    "genre": "Culinary mystery",
+    "description": "Continue The Golden Ladle Chronicles with its second book, The Venetian Gambit.",
+    "symbol": "✧",
+    "cover": null,
+    "amazon": null
+  },
+  {
+    "slug": "the-sauce-of-uncertainty",
+    "title": "The Sauce of Uncertainty",
+    "series": "The Golden Ladle Chronicles",
+    "number": 3,
+    "world": "golden",
+    "genre": "Culinary mystery",
+    "description": "The third book in The Golden Ladle Chronicles.",
+    "symbol": "✧",
+    "cover": null,
+    "amazon": null
+  },
+  {
+    "slug": "the-scent-of-secrets",
+    "title": "The Scent of Secrets",
+    "series": "The Golden Ladle Chronicles",
+    "number": 4,
+    "world": "golden",
+    "genre": "Culinary mystery",
+    "description": "Discover the fourth book in The Golden Ladle Chronicles.",
+    "symbol": "✧",
+    "cover": null,
+    "amazon": null
+  },
+  {
+    "slug": "the-queens-gambit",
+    "title": "The Queen’s Gambit",
+    "series": "Apprentices of Highwind",
+    "number": 1,
+    "world": "highwind",
+    "genre": "Fantasy adventure",
+    "description": "Five young apprentices. A medieval kingdom. Step into a world of magic and ancient secrets.",
+    "symbol": "♜",
+    "cover": null,
+    "amazon": null
+  },
+  {
+    "slug": "the-fractured-crown",
+    "title": "The Fractured Crown",
+    "series": "Apprentices of Highwind",
+    "number": 2,
+    "world": "highwind",
+    "genre": "Fantasy adventure",
+    "description": "Return to the world of Apprentices of Highwind in volume two.",
+    "symbol": "♜",
+    "cover": null,
+    "amazon": null
+  },
+  {
+    "slug": "westvale-where-weird-happens",
+    "title": "Westvale: Where Weird Happens",
+    "series": "Westvale Tales",
+    "number": 1,
+    "world": "westvale",
+    "genre": "Wonderfully strange tales",
+    "description": "Welcome to a town where the bizarre is part of everyday life. A collection of strange, funny stories.",
+    "symbol": "☾",
+    "cover": null,
+    "amazon": null
+  },
+  {
+    "slug": "westvale-even-weirder",
+    "title": "Westvale: Even Weirder",
+    "series": "Westvale Tales",
+    "number": 2,
+    "world": "westvale",
+    "genre": "Wonderfully strange tales",
+    "description": "Westvale returns with another collection of unusual tales in the second Westvale Tales book.",
+    "symbol": "☾",
+    "cover": null,
+    "amazon": null
+  }
 ]
