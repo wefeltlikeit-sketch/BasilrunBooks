@@ -268,7 +268,7 @@ nav a:hover,
 }
 .world-paths {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   margin-top: 50px;
   text-align: left;
@@ -937,3 +937,5 @@ details p {
     transform: none;
   }
 }
+
+.mobius { --book: #284962; --accent: #d0e7df; --pale: #dce7ed; }

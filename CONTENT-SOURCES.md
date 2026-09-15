@@ -9,7 +9,11 @@ User-supplied build brief identifies Basilrun Books, W.T. Brooks, the empty repo
 - https://www.abebooks.com/servlet/SearchResults?inclseries=B0FH33WHH3 — confirms Golden Ladle series order.
 - https://www.goodreads.com/book/show/239836019-westvale — confirms Even Weirder as Westvale Tales 2.
 
-Amazon author page was unavailable to the research browser. Book links intentionally use Amazon searches until direct product links are supplied. Catalog may be incomplete; The Möbius Unit is mentioned in the author profile but was omitted pending stronger book-level verification. No original covers or approved excerpts were available.
+Follow-up: opened View all offers and checked all three AbeBooks pages (65 seller offers). The Amazon All Books page subsequently loaded and confirmed ten titles. All ten direct Amazon links are now recorded in books.json. The two added titles are The Möbius Unit: Quantum Chaos and Other Adventures (B0FKDQPCDM) and Highwind’s Unseen Gears: The Highwind Network, Book 1 (B0FLG9K19V). Their descriptions were verified on the product pages. Highwind Network and Apprentices of Highwind retain separate series labels but share the Highwind browsing world. No volume number is invented for the Möbius collection. Final cover assets remain pending.
+
+Primary catalog: https://www.amazon.com/stores/W.T.-Brooks/author/B0FHGF8SYT/allbooks
+
+New-title sources: https://www.amazon.com/dp/B0FKDQPCDM and https://www.amazon.com/dp/B0FLG9K19V
 
 ## Original landscape
 

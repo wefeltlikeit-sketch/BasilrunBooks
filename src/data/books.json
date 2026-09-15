@@ -9,7 +9,7 @@
     "description": "A secret order of chefs. A mystery in 1927 Paris. Enter the world of The Golden Ladle Chronicles.",
     "symbol": "✧",
     "cover": null,
-    "amazon": null
+    "amazon": "https://www.amazon.com/dp/B0FH2W3MGR"
   },
   {
     "slug": "the-venetian-gambit",
@@ -21,7 +21,7 @@
     "description": "Continue The Golden Ladle Chronicles with its second book, The Venetian Gambit.",
     "symbol": "✧",
     "cover": null,
-    "amazon": null
+    "amazon": "https://www.amazon.com/dp/B0FH5W4TZ4"
   },
   {
     "slug": "the-sauce-of-uncertainty",
@@ -33,7 +33,7 @@
     "description": "The third book in The Golden Ladle Chronicles.",
     "symbol": "✧",
     "cover": null,
-    "amazon": null
+    "amazon": "https://www.amazon.com/dp/B0FH5DYP76"
   },
   {
     "slug": "the-scent-of-secrets",
@@ -45,7 +45,7 @@
     "description": "Discover the fourth book in The Golden Ladle Chronicles.",
     "symbol": "✧",
     "cover": null,
-    "amazon": null
+    "amazon": "https://www.amazon.com/dp/B0FHC3Z7DY"
   },
   {
     "slug": "the-queens-gambit",
@@ -57,7 +57,7 @@
     "description": "Five young apprentices. A medieval kingdom. Step into a world of magic and ancient secrets.",
     "symbol": "♜",
     "cover": null,
-    "amazon": null
+    "amazon": "https://www.amazon.com/dp/B0FHFLT3H2"
   },
   {
     "slug": "the-fractured-crown",
@@ -69,7 +69,19 @@
     "description": "Return to the world of Apprentices of Highwind in volume two.",
     "symbol": "♜",
     "cover": null,
-    "amazon": null
+    "amazon": "https://www.amazon.com/dp/B0FHG2PCNG"
+  },
+  {
+    "slug": "highwinds-unseen-gears",
+    "title": "Highwind’s Unseen Gears",
+    "series": "The Highwind Network",
+    "number": 1,
+    "world": "highwind",
+    "genre": "Fantasy adventure",
+    "description": "Before Queen Aveline’s magical quests, a hidden network of apprentices kept Highwind Castle running. Discover an earlier chapter of Highwind in the first book of The Highwind Network.",
+    "symbol": "♜",
+    "cover": null,
+    "amazon": "https://www.amazon.com/dp/B0FLG9K19V"
   },
   {
     "slug": "westvale-where-weird-happens",
@@ -81,7 +93,7 @@
     "description": "Welcome to a town where the bizarre is part of everyday life. A collection of strange, funny stories.",
     "symbol": "☾",
     "cover": null,
-    "amazon": null
+    "amazon": "https://www.amazon.com/dp/B0FHRFN94K"
   },
   {
     "slug": "westvale-even-weirder",
@@ -93,6 +105,18 @@
     "description": "Westvale returns with another collection of unusual tales in the second Westvale Tales book.",
     "symbol": "☾",
     "cover": null,
-    "amazon": null
+    "amazon": "https://www.amazon.com/dp/B0FLH79X4T"
+  },
+  {
+    "slug": "the-mobius-unit",
+    "title": "The Möbius Unit: Quantum Chaos and Other Adventures",
+    "series": "The Möbius Unit",
+    "number": null,
+    "world": "mobius",
+    "genre": "Science and secret agents",
+    "description": "Five middle schoolers use their scientific talents as secret agents of STEM. Join their missions in a collection bringing together Quantum Chaos and three novellas, where teamwork and clever thinking meet high-tech trouble.",
+    "symbol": "∞",
+    "cover": null,
+    "amazon": "https://www.amazon.com/dp/B0FKDQPCDM"
   }
 ]

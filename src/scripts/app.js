@@ -10,8 +10,9 @@ if (filters) {
     items.forEach(
       (i) => (i.hidden = world !== "all" && i.dataset.world !== world),
     );
+    const count = items.filter((i) => !i.hidden).length;
     document.querySelector("#filter-status").textContent =
-      `${items.filter((i) => !i.hidden).length} stories shown.`;
+      `${count} ${count === 1 ? "story" : "stories"} shown.`;
   }
   buttons.forEach((b) =>
     b.addEventListener("click", () => filter(b.dataset.filter)),
