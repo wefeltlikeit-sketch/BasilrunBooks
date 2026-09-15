@@ -995,3 +995,5 @@ details p {
 .real-cover { background: var(--pale, #ebe6d6); }
 @media (max-width: 1000px) { .story { grid-template-columns: 1fr; gap: 40px; } .story-aside { position: static; } }
 @media (max-width: 650px) { .book-page .synopsis { font-size: 20px; } .story-text p:not(.eyebrow) { font-size: 16px; } .closer p { font-size: 19px !important; } }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.ages { background: var(--pale); border-color: transparent; color: var(--book); font-weight: 600; }

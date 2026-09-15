@@ -45,7 +45,8 @@
       "The Uncommoners",
       "A Taste of Magic"
     ],
-    "closer": "Taste the mystery. Smell the danger. Welcome to the secret world hiding in every kitchen."
+    "closer": "Taste the mystery. Smell the danger. Welcome to the secret world hiding in every kitchen.",
+    "ages": "9–13"
   },
   {
     "slug": "the-venetian-gambit",
@@ -68,7 +69,8 @@
       "Their investigation in Venice reveals a chilling truth: the plot is merely a single thread in a web that leads directly back to Paris. The enemies they thought vanquished still command a network from the shadows, a network of scientific purists known as the Rationalists. This new foe has developed a more insidious weapon—an engineered fungus designed not to control the mind, but to gently, perfectly erase it. When the weapon finds its way into their own kitchen, Léo and Colette realize their sanctuary, Le Grand Panier, has become the next battlefield.",
       "To save their home and the soul of Paris itself, the two young heroes must embark on their most dangerous quest yet. Their hunt for answers will sweep them from the canals of Venice to the treacherous underbelly of Paris, through the secret history of their own Order, and even into a desperate dream of Napoleon’s banquet table, where the secrets of a legendary chef may hold the only key to victory."
     ],
-    "closer": "In a war fought with flavor and memory, can two apprentices unmask a conspiracy of ghosts before the city’s creative heart is silenced forever?"
+    "closer": "In a war fought with flavor and memory, can two apprentices unmask a conspiracy of ghosts before the city’s creative heart is silenced forever?",
+    "ages": "9–13"
   },
   {
     "slug": "the-sauce-of-uncertainty",
@@ -93,7 +95,8 @@
       "As they close in on the source of the insidious Sauce of Uncertainty, they uncover a devastating secret that strikes at the very heart of their Order—a lie they have believed for years that is more dangerous than any poison. Now, in a desperate race against time on the Orient Express, they must not only save the future of science but reclaim the soul of their own past.",
       "The Sauce of Uncertainty is a thrilling new adventure in the world of The Golden Ladle Chronicles, blending culinary magic, historical espionage, and the unbreakable bonds of found family."
     ],
-    "closer": "In a world of complex formulas, the most powerful recipe of all is a dash of courage and a simple taste of the truth."
+    "closer": "In a world of complex formulas, the most powerful recipe of all is a dash of courage and a simple taste of the truth.",
+    "ages": "9–13"
   },
   {
     "slug": "the-scent-of-secrets",
@@ -131,7 +134,8 @@
         "role": "A scientific “Nose” who trusts only formulas and molecules"
       }
     ],
-    "closer": "When the enemy is a master of the perfect forgery, how can you trust your senses to tell you what is real?"
+    "closer": "When the enemy is a master of the perfect forgery, how can you trust your senses to tell you what is real?",
+    "ages": "9–13"
   },
   {
     "slug": "the-queens-gambit",
@@ -189,7 +193,8 @@
       "intricate magic systems",
       "slow-burn mystery"
     ],
-    "closer": "Your apprenticeship begins now."
+    "closer": "Your apprenticeship begins now.",
+    "ages": "9–13"
   },
   {
     "slug": "the-fractured-crown",
@@ -220,7 +225,8 @@
         "Behind enemy lines, a young spy named Cadell weighs his loyalty against a growing admiration for his enemies"
       ]
     },
-    "closer": "Deeper lore, more complex alliances, and impossible choices that will change the kingdom forever."
+    "closer": "Deeper lore, more complex alliances, and impossible choices that will change the kingdom forever.",
+    "ages": "9–13"
   },
   {
     "slug": "highwinds-unseen-gears",
@@ -253,7 +259,8 @@
         "role": "A secret society of young operatives working in the castle’s shadows"
       }
     ],
-    "closer": "The boy who’s only ever caused accidents must now learn to create them on purpose."
+    "closer": "The boy who’s only ever caused accidents must now learn to create them on purpose.",
+    "ages": "9–13"
   },
   {
     "slug": "westvale-where-weird-happens",
@@ -290,7 +297,8 @@
       "Sideways Stories from Wayside School",
       "Goosebumps"
     ],
-    "closer": "Fourteen stories. One very strange school. Zero normal days."
+    "closer": "Fourteen stories. One very strange school. Zero normal days.",
+    "ages": "9–13"
   },
   {
     "slug": "westvale-even-weirder",
@@ -326,7 +334,8 @@
       "Goosebumps",
       "Wayside School"
     ],
-    "closer": "Hilarious, spooky, and heartfelt tales of middle school mayhem with a supernatural twist."
+    "closer": "Hilarious, spooky, and heartfelt tales of middle school mayhem with a supernatural twist.",
+    "ages": "9–13"
   },
   {
     "slug": "the-mobius-unit",
@@ -402,6 +411,7 @@
         "Five friends who collaborate, learn, and grow"
       ]
     },
-    "closer": "Perfect for readers who love secret agent stories, futuristic tech, and heroes who use their brains."
+    "closer": "Perfect for readers who love secret agent stories, futuristic tech, and heroes who use their brains.",
+    "ages": "9–13"
   }
 ]
