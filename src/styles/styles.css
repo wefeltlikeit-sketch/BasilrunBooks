@@ -133,6 +133,12 @@ nav a:hover,
   padding: 45px 20px;
   max-width: 800px;
   margin: auto;
+  background: radial-gradient(
+    ellipse 80% 92% at 50% 45%,
+    rgba(247, 241, 222, 0.86),
+    rgba(247, 241, 222, 0.5) 46%,
+    transparent 72%
+  );
 }
 .eyebrow {
   font-size: 10px;
