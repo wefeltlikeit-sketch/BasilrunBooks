@@ -134,10 +134,10 @@ nav a:hover,
   max-width: 800px;
   margin: auto;
   background: radial-gradient(
-    ellipse 80% 92% at 50% 45%,
-    rgba(247, 241, 222, 0.86),
-    rgba(247, 241, 222, 0.5) 46%,
-    transparent 72%
+    ellipse 66% 52% at 50% 34%,
+    rgba(247, 241, 222, 0.9),
+    rgba(247, 241, 222, 0.45) 48%,
+    transparent 70%
   );
 }
 .eyebrow {
@@ -157,6 +157,12 @@ nav a:hover,
   color: #3a4d37;
   line-height: 1.65;
   margin-bottom: 23px;
+  text-shadow:
+    0 0 4px rgba(247, 241, 222, 0.95),
+    0 1px 12px rgba(247, 241, 222, 0.85);
+}
+.hero-copy .eyebrow {
+  text-shadow: 0 0 6px rgba(247, 241, 222, 0.9);
 }
 .button {
   display: inline-flex;
