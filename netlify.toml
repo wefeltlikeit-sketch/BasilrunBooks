@@ -1,8 +1,10 @@
+# Basilrun Books — plain static site served from the repo root.
+# The previous Node generator (scripts/build.mjs -> dist/) was retired in the
+# dark v3 redesign. It is preserved on the archive/pre-dark-redesign branch.
+
 [build]
-command = "npm run build"
-publish = "dist"
-[build.environment]
-NODE_VERSION = "22"
+publish = "."
+
 [[headers]]
 for = "/*"
 [headers.values]
