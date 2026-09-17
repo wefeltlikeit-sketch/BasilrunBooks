@@ -1,0 +1,27 @@
+# Old generated-site URLs (cream catalog) -> dark v3 pages.
+# Every /books/<slug>/ path below was live and indexed before the redesign.
+
+# Golden Ladle Chronicles
+/books/leo-and-the-order-of-the-golden-ladle/  /golden-ladle.html  301
+/books/the-venetian-gambit/                    /golden-ladle.html  301
+/books/the-sauce-of-uncertainty/               /golden-ladle.html  301
+/books/the-scent-of-secrets/                   /golden-ladle.html  301
+
+# Westvale Tales
+/books/westvale-where-weird-happens/           /westvale.html      301
+/books/westvale-even-weirder/                  /westvale.html      301
+
+# Apprentices of Highwind + The Highwind Network
+/books/the-queens-gambit/                      /highwind.html      301
+/books/the-fractured-crown/                    /highwind.html      301
+/books/highwinds-unseen-gears/                 /highwind.html      301
+
+# The Mobius Unit
+/books/the-mobius-unit/                        /mobius.html        301
+
+# Former standalone pages
+/author/                                       /#author            301
+/privacy/                                      /privacy.html       301
+
+# Retired build artifacts
+/styles.css                                    /css/styles.css     301

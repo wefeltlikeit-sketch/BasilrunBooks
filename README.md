@@ -1,38 +1,79 @@
 # Basilrun Books
 
-An illustrated static website for W.T. Brooks. Ten book pages across four story worlds, a filterable library, author and privacy pages, and a custom 404. A small keyboard-accessible firefly discovery adds quiet atmosphere.
+Author website for W.T. Brooks — middle-grade mysteries, fantasy, and wonderfully
+strange tales. Live at **https://basilrunbooks.com** via Netlify.
 
-## Run locally
+## Architecture
 
-Requires Node.js 22 or newer. No package dependencies or installation needed.
+Plain static HTML/CSS. **No build step.** Netlify publishes `public/`
+(`netlify.toml` → `publish = "public"`), so whatever is in that folder is what
+ships. Everything outside it — this README, the notes files, `netlify.toml` —
+stays out of the deploy.
 
-```sh
-npm run dev
+```
+public/
+index.html          Home — hero, series grid, author section
+westvale.html       Westvale Tales series page
+golden-ladle.html   The Golden Ladle Chronicles series page
+highwind.html       Apprentices of Highwind + The Highwind Network
+mobius.html         The Möbius Unit
+privacy.html        Privacy notice
+404.html            Not-found page (Netlify serves this automatically)
+css/styles.css      All site styles — dark v3 art direction
+assets/*.webp       Cover art and brand mark
+assets/favicon.svg  Favicon
+assets/og-basilrun.jpg  Open Graph / social share image
+_redirects          301s from the pre-redesign URL structure
+robots.txt          Crawl policy + sitemap pointer
+sitemap.xml         Static sitemap — update when adding a page
 ```
 
-Open http://localhost:4321. After editing source files, rebuild and refresh. `npm run build` generates `dist/`; `npm run preview` serves it; `npm run check` checks generated internal links, assets, unique book slugs, headings and descriptions.
+## Working on the site
 
-## Netlify
+There is nothing to install and nothing to compile. Edit the HTML and CSS
+directly, then preview:
 
-Connect this GitHub repository in Netlify. The included netlify.toml sets `npm run build` and publish directory `dist`. Netlify's URL environment variable supplies the canonical origin, sitemap and social image URLs. For a custom domain set `url` in `src/data/site.json` which takes precedence over the Netlify URL. No SPA fallback: Netlify uses the generated 404.html for missing routes.
+```bash
+cd public
+python3 -m http.server 8080
+# http://localhost:8080/
+```
 
-## Content and artwork
+## When you add a page
 
-- `src/data/books.json`: book metadata. Add a unique slug, title, series, number, genre, short verified description, world palette (`golden`, `highwind`, `westvale`, `mobius`), symbol, optional cover URL, and optional direct Amazon URL. Every entry automatically gets a page and library listing. Add another palette to styles for a new world; update the home filters in build.mjs for a new series.
-- `src/data/site.json`: author, brand, description, Amazon author page and canonical domain.
-- `public/assets/`: copied directly into the output. Put approved covers in `public/assets/books/`, then set `cover` to `/assets/books/filename.jpg`. All ten current books use author-supplied artwork, optimized as 480px and 960px WebP images. Set coverSmall, coverWidth, coverHeight and coverAlt alongside cover. Books without artwork fall back to a clearly marked typographic cover.
-- `scripts/build.mjs`: page layouts, reusable cover/card helpers and SEO. All user-editable strings are HTML-escaped.
-- `src/styles/styles.css`: global design tokens, responsive layouts, world palettes, and atmospheric animation. All motion honors prefers-reduced-motion.
-- `src/scripts/app.js`: progressively enhanced filters and firefly toggle. Content and navigation remain usable without JavaScript. Nothing is stored or sent.
+1. Copy the `<head>` block from an existing page and update `title`,
+   `description`, `canonical`, `og:url`, `og:title`, `og:description`, and the
+   JSON-LD `<script>`.
+2. Keep the `google-site-verification` meta tag — removing it un-verifies the
+   property in Google Search Console.
+3. Add the new URL to `sitemap.xml`.
+4. Add a nav link in the header and footer of every other page.
 
-Direct Amazon destinations were verified against the author’s complete Amazon catalog. Null `amazon` values deliberately produce labeled title-and-author Amazon searches. Replace with confirmed product URLs when available. No prices, ratings or reviews are asserted.
+## History
 
-## Future additions
+Before the dark v3 redesign this repo was a Node static-site generator
+(`scripts/build.mjs` reading `src/data/books.json`, publishing to `dist/`). It
+produced a cream-toned catalog with a detail page for each of the ten titles.
 
-Add characters only with verified descriptions and approved portraits, preferably in a separate `src/data/characters.json`; render them through a helper in the build script. Excerpts, activity sheets and downloads can use the same data-plus-page pattern. No preview text or character art has been copied from Amazon. There are no invented future releases, signup forms, or inactive controls.
+That version is preserved in full:
 
-The original landscape is a visual metaphor for the website, not canonical book artwork. Its generated provenance and research sources are in CONTENT-SOURCES.md. Seasonal variants can replace the world image and palette without changing content.
+- branch `archive/pre-dark-redesign`
+- tag `archive/pre-dark-redesign-tag`
 
-## Before a public launch
+`_redirects` maps every URL that version published to its closest equivalent
+here, so nothing that was indexed returns a 404. All ten book slugs land on
+the series page that now covers them.
 
-Confirm the author bio. Set the production URL and rebuild. Test the production Netlify domain after connecting it. Browser checks and any remaining limitations are recorded in QA.md.
+## Two things not to undo
+
+`netlify.toml` must set BOTH `command` and `publish`. Settings it omits fall
+back to the dashboard, which still holds the retired generator's values — an
+omitted `command` runs npm and fails the build, and an omitted (or `"."`)
+`publish` silently ships a cached copy of the old site. See the comments in
+that file.
+
+
+`.hero` carries `overflow-x: clip`. It is not cosmetic — `.hero::before` is
+positioned at `right: -10%`, and without the clip every page scrolls sideways
+by 32px on desktop and 39px on a phone. Clip it here, not on `html` or `body`:
+both of those stop the sticky header from sticking.
