@@ -3,6 +3,11 @@
 # dark v3 redesign. It is preserved on the archive/pre-dark-redesign branch.
 
 [build]
+# This site has no build step. The command must be set explicitly: settings
+# omitted from this file fall back to whatever is stored in the Netlify UI,
+# and the UI still holds "npm run build" from the old generator. Leaving it
+# out made Netlify run npm against a repo with no package.json, which fails.
+command = "echo 'Basilrun Books is a static site — nothing to build.'"
 publish = "."
 
 [[headers]]
