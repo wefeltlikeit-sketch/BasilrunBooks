@@ -26,3 +26,31 @@ Prompt: Use case: illustration-story. Create a premium illustrated website lands
 Source folder: `/Volumes/Samsung SSD/Book Covers`. Original files are unchanged. Each book has 480px and 960px WebP derivatives in `public/assets/books/`, preserving the full 16:25 cover artwork. Filename typos were resolved by reading the cover titles.
 
 The initial Book 1 artwork was superseded by the author’s `Apprentices of Highwind 2 use.jpg`. Despite its filename, its printed title is “The Queen’s Gambit” and “Volume 1”; it is correctly assigned to Book 1. “The Fractured Crown” remains Book 2. All supplied artwork now matches the website titles.
+
+## Reading ages
+
+Checked 2026-09-17 against the "Reading age" field on each title's Amazon
+Kindle listing. These are the numbers the site publishes, in both the visible
+age chips and the JSON-LD `typicalAgeRange`.
+
+| Title | ASIN | Reading age |
+|---|---|---|
+| Léo and the Order of the Golden Ladle | B0FH2W3MGR | 9–13 |
+| The Venetian Gambit | B0FH5W4TZ4 | 9–13 |
+| The Sauce of Uncertainty | B0FH5DYP76 | 9–13 |
+| The Scent of Secrets | B0FHC3Z7DY | 9–13 |
+| The Queen's Gambit | B0FHFLT3H2 | 9–15 |
+| The Fractured Crown | B0FHG2PCNG | 9–15 |
+| Highwind's Unseen Gears | B0FLG9K19V | 10–14 |
+| Westvale: Where Weird Happens | B0FHRFN94K | 8–12 |
+| Westvale: Even Weirder | B0FLH79X4T | 9–14 |
+| The Möbius Unit | B0FKDQPCDM | 8–12 |
+
+Series-level headings show the span covering every book in that series:
+Westvale Tales 8–14, The Golden Ladle Chronicles 9–13, Apprentices of
+Highwind 9–15, The Highwind Network 10–14, The Möbius Unit 8–12.
+
+The retired generator's `src/data/books.json` assigned 9–13 to all ten titles.
+That was a blanket default, not sourced per title — six of the ten did not
+match their listing. If a reading age is changed in KDP, update this table and
+both the age chip and the JSON-LD on the relevant pages.
