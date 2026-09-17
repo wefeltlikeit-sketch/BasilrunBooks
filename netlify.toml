@@ -1,14 +1,24 @@
-# Basilrun Books — plain static site served from the repo root.
+# Basilrun Books — plain static site. No build step.
 # The previous Node generator (scripts/build.mjs -> dist/) was retired in the
 # dark v3 redesign. It is preserved on the archive/pre-dark-redesign branch.
 
 [build]
-# This site has no build step. The command must be set explicitly: settings
-# omitted from this file fall back to whatever is stored in the Netlify UI,
-# and the UI still holds "npm run build" from the old generator. Leaving it
-# out made Netlify run npm against a repo with no package.json, which fails.
+# Both keys must be set explicitly. Netlify merges this file over the build
+# settings stored in the dashboard, and anything omitted here falls back to
+# those. The dashboard still holds the old generator's settings, so:
+#
+#   command  — omitted, Netlify ran "npm run build" against a repo with no
+#              package.json, and the deploy failed.
+#   publish  — set to "." it STILL used the dashboard's "dist". Netlify
+#              appears to normalise "." to the base directory, i.e. an empty
+#              relative path, and treat empty as unset. It then restored a
+#              months-old dist/ from the build cache and shipped that: a
+#              successful deploy of the pre-redesign site.
+#
+# Hence a real subdirectory. "public" is a non-empty path, so it overrides
+# the dashboard cleanly and the site is served from where it actually lives.
 command = "echo 'Basilrun Books is a static site — nothing to build.'"
-publish = "."
+publish = "public"
 
 [[headers]]
 for = "/*"

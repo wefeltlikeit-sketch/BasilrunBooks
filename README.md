@@ -5,10 +5,13 @@ strange tales. Live at **https://basilrunbooks.com** via Netlify.
 
 ## Architecture
 
-Plain static HTML/CSS. **No build step.** Netlify publishes the repository root
-(`netlify.toml` → `publish = "."`), so whatever is committed here is what ships.
+Plain static HTML/CSS. **No build step.** Netlify publishes `public/`
+(`netlify.toml` → `publish = "public"`), so whatever is in that folder is what
+ships. Everything outside it — this README, the notes files, `netlify.toml` —
+stays out of the deploy.
 
 ```
+public/
 index.html          Home — hero, series grid, author section
 westvale.html       Westvale Tales series page
 golden-ladle.html   The Golden Ladle Chronicles series page
@@ -31,6 +34,7 @@ There is nothing to install and nothing to compile. Edit the HTML and CSS
 directly, then preview:
 
 ```bash
+cd public
 python3 -m http.server 8080
 # http://localhost:8080/
 ```
@@ -60,7 +64,14 @@ That version is preserved in full:
 here, so nothing that was indexed returns a 404. All ten book slugs land on
 the series page that now covers them.
 
-## One thing not to undo
+## Two things not to undo
+
+`netlify.toml` must set BOTH `command` and `publish`. Settings it omits fall
+back to the dashboard, which still holds the retired generator's values — an
+omitted `command` runs npm and fails the build, and an omitted (or `"."`)
+`publish` silently ships a cached copy of the old site. See the comments in
+that file.
+
 
 `.hero` carries `overflow-x: clip`. It is not cosmetic — `.hero::before` is
 positioned at `right: -10%`, and without the clip every page scrolls sideways
