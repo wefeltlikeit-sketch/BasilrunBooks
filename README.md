@@ -12,6 +12,8 @@ Plain static HTML/CSS. **No build step.** Netlify publishes the repository root
 index.html          Home — hero, series grid, author section
 westvale.html       Westvale Tales series page
 golden-ladle.html   The Golden Ladle Chronicles series page
+highwind.html       Apprentices of Highwind + The Highwind Network
+mobius.html         The Möbius Unit
 privacy.html        Privacy notice
 404.html            Not-found page (Netlify serves this automatically)
 css/styles.css      All site styles — dark v3 art direction
@@ -55,4 +57,12 @@ That version is preserved in full:
 - tag `archive/pre-dark-redesign-tag`
 
 `_redirects` maps every URL that version published to its closest equivalent
-here, so nothing that was indexed returns a 404.
+here, so nothing that was indexed returns a 404. All ten book slugs land on
+the series page that now covers them.
+
+## One thing not to undo
+
+`.hero` carries `overflow-x: clip`. It is not cosmetic — `.hero::before` is
+positioned at `right: -10%`, and without the clip every page scrolls sideways
+by 32px on desktop and 39px on a phone. Clip it here, not on `html` or `body`:
+both of those stop the sticky header from sticking.

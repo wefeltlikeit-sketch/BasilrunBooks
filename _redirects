@@ -11,11 +11,13 @@
 /books/westvale-where-weird-happens/           /westvale.html      301
 /books/westvale-even-weirder/                  /westvale.html      301
 
-# Highwind + Mobius — no dedicated pages yet, send to the home page series grid
-/books/the-queens-gambit/                      /#series            301
-/books/the-fractured-crown/                    /#series            301
-/books/highwinds-unseen-gears/                 /#series            301
-/books/the-mobius-unit/                        /#series            301
+# Apprentices of Highwind + The Highwind Network
+/books/the-queens-gambit/                      /highwind.html      301
+/books/the-fractured-crown/                    /highwind.html      301
+/books/highwinds-unseen-gears/                 /highwind.html      301
+
+# The Mobius Unit
+/books/the-mobius-unit/                        /mobius.html        301
 
 # Former standalone pages
 /author/                                       /#author            301
